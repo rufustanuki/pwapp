@@ -1,0 +1,12 @@
+{
+	"name":"PWA Sample",
+	"short_name":"PWA",
+	"theme_color": "#bbff44",
+	"display":"standalone",
+	"icons":[{
+		"src":"icond.png",
+		"sizes":"256x256",
+		"type":"image/png"
+	}]
+}
+
