@@ -1,6 +1,7 @@
 {
 	"name":"PWA Sample",
 	"short_name":"PWA",
+	"start_url":"https://rufustanuki.github.io/pwapp/",
 	"theme_color": "#bbff44",
 	"display":"standalone",
 	"icons":[{

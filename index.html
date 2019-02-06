@@ -2,12 +2,35 @@
 <html>
 	<head>
 		<link rel="manifest" href="./manifest.json">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<script src="script.js"></script>
 	<script>
-		if('serviceWoker' in navigator){
-			navigator.serviceWorker.register('./service-worker.js').then(function(){console.log('Service Worker Registered');});}
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', function() {
+				navigator.serviceWorker.register('sw.js').then(function(registration) {
+				}, function(err) {
+					console.log('ServiceWorker registration failed: ', err);
+				});
+			});
+		}
 	</script>
+<style>
+ul{
+	list-style-type: none;
+}
+ul li:first-child {
+	color:red;
+	font-size:2rem;
+}
+#dice{
+	padding:5px 10px;
+}
+</style>
 	<title>PWA</title>
 	</head>
 	<body>
-		<h1>hello pwa</h1>
+		<h1>Dice</h1>
+		<button id="dice">Roll</button>
+		<ul id="result"></ul>
+	</body>
 </html>
