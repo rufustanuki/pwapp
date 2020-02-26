@@ -17,4 +17,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			ul.removeChild(ul.lastElementChild);
 		}
 	});
+
+	if (window.matchMedia('(display-mode: standalone)').matches) {
+		console.log("alrady installed");
+	}else{
+		console.log("not installed");
+	}
+		
 });
